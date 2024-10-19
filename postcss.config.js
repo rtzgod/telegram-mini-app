@@ -10,3 +10,4 @@ export default {
     tsconfigRootDir: __dirname,
   },
 }
+
