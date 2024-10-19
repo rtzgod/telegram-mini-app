@@ -1,0 +1,226 @@
+/* Подключаем шрифт Montserrat */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+/* Боковое меню навигации */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    position: fixed;
+    height: 100vh;
+}
+
+.course-progress h2 {
+    margin-top: 0;
+    color: #6C63FF;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-bar .progress {
+    background-color: #6C63FF;
+    height: 100%;
+}
+
+.continue-btn {
+    background-color: #6C63FF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.course-navigation {
+    margin-top: 20px;
+}
+
+.course-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-navigation h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.course-navigation li {
+    margin-bottom: 10px;
+}
+
+.course-navigation li ul {
+    margin-left: 15px;
+}
+
+.course-navigation li ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.course-navigation li ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.course-navigation li ul li.completed span:first-child {
+    color: #6C63FF;
+    font-weight: 600;
+}
+
+.course-navigation li ul li.completed .lesson-progress {
+    color: #6C63FF;
+}
+
+.lesson-progress {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.lesson-progress::before {
+    content: '• ';
+    color: #6C63FF;
+}
+
+/* Основной контент */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 270px; /* Ширина сайдбара + отступ */
+}
+
+.content header h1 {
+    margin-top: 0;
+    color: #6C63FF;
+}
+
+.lesson-content h2 {
+    color: #333;
+}
+
+.lesson-content video {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.lesson-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.lesson-content .lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.prev-step-btn,
+.next-step-btn {
+    background-color: #6C63FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.prev-step-btn:hover,
+.next-step-btn:hover {
+    background-color: #574b90;
+}
+
+.prev-step-btn[style*="display: none"],
+.next-step-btn[style*="display: none"] {
+    visibility: hidden;
+}
+
+#step-progress {
+    font-size: 1em;
+    color: #333;
+}
+
+.feedback {
+    margin-top: 20px;
+}
+
+.feedback button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.feedback button:hover {
+    color: #6C63FF;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .content {
+        margin-left: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .lesson-content video {
+        max-width: 100%;
+    }
+    .lesson-content .lesson-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .prev-step-btn,
+    .next-step-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #step-progress {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}

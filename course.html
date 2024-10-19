@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Терминал Linux. Основы</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Боковое меню навигации -->
+    <aside class="sidebar">
+        <div class="course-progress">
+            <h2>Прогресс курса</h2>ч
+            <div class="progress-bar">
+                <div class="progress" id="overall-progress"></div>
+            </div>
+            <p id="materials-progress">0% материалов пройдено</p>
+            <p id="points-earned">0/0 баллов получено</p>
+            <button class="continue-btn" id="continue-course">Продолжить курс</button>
+        </div>
+        <nav class="course-navigation">
+            <ul id="course-structure">
+                <!-- Структура курса будет динамически заполнена через JavaScript -->
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="content">
+        <header>
+            <h1>Терминал Linux. Основы</h1>
+        </header>
+
+        <!-- Видео и шаги урока -->
+        <section class="lesson-content">
+            <h2 id="lesson-title"></h2>
+            <video controls id="lesson-video">
+                <source src="" type="video/mp4">
+                Ваш браузер не поддерживает воспроизведение видео.
+            </video>
+            <p id="lesson-description"></p>
+            <div class="lesson-navigation">
+                <button class="prev-step-btn" id="prev-step">Предыдущий шаг</button>
+                <p id="step-progress">Шаг 1 из 1</p>
+                <button class="next-step-btn" id="next-step">Следующий шаг</button>
+            </div>
+            <!-- Интерактивные элементы -->
+            <div class="feedback">
+                <button class="like-btn">👍</button>
+                <button class="dislike-btn">👎</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
