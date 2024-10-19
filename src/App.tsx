@@ -199,38 +199,32 @@ function App() {
     return (
         <div className="flex flex-col h-full min-h-screen w-screen rounded-xl bg-customGrayWallet">
             {view === View.LANDING && (
-                <div className="flex flex-col flex-grow min-h-full justify-end">
-                    <div className="components-container mb-2">
-                        <SkipButton skip={skip} />
-                        <Avatar src={avatarScooter} />
-                        <div className="flex flex-col bg-white pt-4 pr-8 pb-8 pl-8 gap-4 rounded-t-3xl rounded-b-xl shadow-custom-white">
-                            <div>
-                                <h2 className="headline">
-                                    Telegram Mini App Demo
-                                </h2>
-                            </div>
-                            <div>
-                                <p className="text-customGrayText mt-0 mr-0 mb-4 ml-0">
-                                    Click on the button below and follow the
-                                    instructions to link your wallet to this
-                                    telegram mini app demo.
-                                </p>
-                                <p className="text-customGrayText mt-0 mr-0 mb-4 ml-0">
-                                    Softstack is a Web3 software development,
-                                    cybersecurity and consulting service
-                                    partner.
-                                </p>
+                <div className="container">
+                    <div className="flex flex-col flex-grow min-h-full justify-end">
+                        <div className="components-container mb-2">
+                            <SkipButton skip={skip} />
+                            <Avatar src={avatarScooter} />
+                            <div className="selection-box">
+                                <h2>Telegram Mini App Demo</h2> {/* Use h2 from CSS */}
+                                <div>
+                                    <p className="text-customGrayText mt-0 mr-0 mb-4 ml-0">
+                                        Click on the button below and follow the instructions to link your wallet to this telegram mini app demo.
+                                    </p>
+                                    <p className="text-customGrayText mt-0 mr-0 mb-4 ml-0">
+                                        Softstack is a Web3 software development, cybersecurity and consulting service partner.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="p-2 mb-4">
-                        <PrimaryButton
-                            title="Connect Your Wallet"
-                            callback={skip}
-                        />
+                        <div className="p-2 mb-4">
+                            <PrimaryButton
+                                title="Connect Your Wallet"
+                                callback={skip}
+                            />
+                        </div>
                     </div>
                 </div>
-            )}
+            )}    
             {view === View.CONNECT && (
                 <div className="components-container">
                     <div
