@@ -1,0 +1,15 @@
+/* src/components/ProgressBar.css */
+
+.progress-bar {
+    height: 20px;
+    background-color: #e0e0e0; /* Фоновый цвет прогресс-бара */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #007bff; /* Цвет заполненной части прогресс-бара */
+    transition: width 0.3s ease;
+}
